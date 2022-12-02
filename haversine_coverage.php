@@ -16,6 +16,7 @@ class haversineCoverage
                 $result[$shopper['id']]['coverage'][] = $this->getDistanceBetweenPoints($location['lat'], $location['lng'], $shopper['lat'], $shopper['lng']);
             }
         }
+
         foreach ($result as $key => $newResult) {
             $data[$key]['shopper_id'] = $newResult['shopper_id'];
             $data[$key]['coverage'] = round(array_sum($newResult['coverage']));

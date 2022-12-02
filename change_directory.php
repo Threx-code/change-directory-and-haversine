@@ -11,6 +11,10 @@ class ChangeDirectory
         $this->currentPath = $path;
     }
 
+    /**
+     * @param $newPath
+     * @return $this|void
+     */
     public function cd($newPath)
     {
         $separator = '/';
@@ -38,7 +42,7 @@ class ChangeDirectory
     /**
      * @param $data
      * @param $separator
-     * @return array|false|mixed|string[]
+     * @return false|mixed|string[]
      */
     private function convertToArray($data, $separator)
     {
