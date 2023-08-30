@@ -7,7 +7,7 @@ class haversineCoverage
      * @param array $shoppers
      * @return array
      */
-    public function calculateDistance(array $locations, array $shoppers)
+    public function calculateDistance(array $locations, array $shoppers): array
     {
         $data = $result = [];
         foreach ($shoppers as $shopper) {
@@ -33,7 +33,7 @@ class haversineCoverage
      * @param $longitude2
      * @return float|int
      */
-    public function getDistanceBetweenPoints($latitude1, $longitude1, $latitude2, $longitude2)
+    public function getDistanceBetweenPoints($latitude1, $longitude1, $latitude2, $longitude2): float|int
     {
         $earthRadius = 6371;
         $newLatitude = deg2rad($latitude2 - $latitude1);

@@ -5,10 +5,14 @@ namespace App;
 class ChangeDirectory
 {
     public mixed $currentPath;
+
     const  SEPARATOR = '/';
     const PATH_TO_CHECK = ['..', '.'];
 
-    function __construct($path = 'a/b/c/d')
+    /**
+     * @param string $path
+     */
+    function __construct(string $path = 'a/b/c/d')
     {
         $this->currentPath = $path;
     }
